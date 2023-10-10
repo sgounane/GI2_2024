@@ -11,20 +11,54 @@
     <h1>ToDos</h1>
     
     
-    <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">UserID</th>
-            <th scope="col">Todo</th>
-            <th scope="col">Completed</th>
-          </tr>
-        </thead>
-        <tbody id="tb">
-          
-        </tbody>
-      </table>
+    
     </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm  mx-2 border border-primary">
+        <form>
+          <div class="form-group">
+            <label for="userid">UserId</label>
+            <input type="text" class="form-control" id="userid" placeholder="234">
+          </div>
+          <div class="form-group">
+            <label for="todo">Todo</label>
+            <input type="text" class="form-control" id="todo"  placeholder="todo">
+          </div>
+          
+          <input type="button" id="add" class="btn btn-primary" value="Add">
+        </form>
+        <hr>
+        <form >
+          <div class="form-group">
+            <label for="todoSearche">Todo Filter</label>
+            <input type="text" class="form-control" id="todoSearche" placeholder="todo">
+          </div>
+          <div class="form-group">
+            <label for="userSearche">User Filter</label>
+            <input type="text" class="form-control" id="userSearche" placeholder="233">
+          </div>
+       </form>
+        </div>
+        <div class="col-sm-8  border border-primary" >
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">UserID</th>
+                <th scope="col">Todo</th>
+                <th scope="col">Completed</th>
+              </tr>
+            </thead>
+            <tbody id="tb">
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

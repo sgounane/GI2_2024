@@ -11,6 +11,7 @@
 
 <?php
 if($_SERVER["REQUEST_METHOD"]=="GET"):?> 
+<?= $_SERVER["SERVER_ADDR"]?>
 <form action="multiform.php" method="POST">
     <label class="form-label" for="nom">Nom*:</label>
     <input class="form-control" type="text" name="nom"><br>

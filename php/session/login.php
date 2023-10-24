@@ -1,3 +1,8 @@
+<?php 
+session_start(); 
+if(isset($_SESSION["user"])) header("Location: index.php");
+
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,15 +13,20 @@
   </head>
   <body>
 <div class="container">
-<form action="index.php" method="POST">
-
+  <?php
+     if(isset($_SESSION["error"])) echo "<div style='background-color:orange;'> ".$_SESSION["error"]."</div>";
+  ?>
+<form action="auth.php" method="POST">
+    <h1>LOGIN</h1>
     <label class="form-label" for="user">Login*: </label>
     <input class="form-control" type="text" name="user"><br>
     <label class="form-label" for="password">Password *: </label>
     <input class="form-control" type="password" name="password"><br>
     <input class="btn btn-primary" type="submit"  value="Login" name="login" >
 </form>
+<pre>
 
+</pre>
 </div>
   </body>
 </html>

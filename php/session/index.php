@@ -1,3 +1,5 @@
+<?php session_start();  
+unset($_SESSION["error"]);?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,11 +8,14 @@
     <title>Home</title>
 </head>
 <body>
-    <?php
-    
-    if(isset($user))
-    echo "<h1> Bonjour $user</h1>";
-    else    header("Location: login.php");
-    ?>
+    <?php if( isset($_SESSION["user"])): ?>
+        <h1> Bonjour <?=$_SESSION['user']?> </h1>
+        <form action="auth.php" method="POST">
+            <input type="submit" value="logout" name="logout">
+        </form>
+        
+    <?php else : ?>
+           <?php header("Location: login.php");?>
+    <?php endif ?>
 </body>
 </html>

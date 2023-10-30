@@ -1,0 +1,22 @@
+[
+    {
+        "id":1,
+        "mail":"user1@gmail.com",
+        "age":12,
+        "password":"1233"
+    },
+    {
+        "id":2,
+        "mail":"user2@gmail.com",
+        "age":22,
+        "password":"1234"
+    },
+    {
+        "id":3,
+        "mail":"user3@gmail.com",
+        "password":"1233",
+        "age":34
+    }
+   
+
+]

@@ -1,0 +1,23 @@
+[
+    {
+        "id":1,
+        "titre":"thinkpad x72",
+        "prix":6000,
+        "image":"images/1.png",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet modi officiis, vel ea ipsam iusto, voluptatem exercitationem ab dicta, perspiciatis corrupti molestiae ducimus minus autem nam asperiores dolor blanditiis repellendus."
+    },
+    {
+        "id":2,
+        "titre":"HP eliteBook",
+        "prix":7200,
+        "image":"images/2.png",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet modi officiis, vel ea ipsam iusto, voluptatem exercitationem ab dicta, perspiciatis corrupti molestiae ducimus minus autem nam asperiores dolor blanditiis repellendus."
+    },
+    {
+        "id":3,
+        "titre":"HP ediaBook",
+        "prix":4500,
+        "image":"images/3.png",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet modi officiis, vel ea ipsam iusto, voluptatem exercitationem ab dicta, perspiciatis corrupti molestiae ducimus minus autem nam asperiores dolor blanditiis repellendus."
+    }
+]

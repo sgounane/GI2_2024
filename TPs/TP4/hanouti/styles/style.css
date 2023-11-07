@@ -8,6 +8,10 @@ header, footer{
     margin: 0;
     
 }
+.article img{
+    width: 180px;
+    height: 180px;
+}
 header{
     position: sticky;
     top:0px;
@@ -64,10 +68,18 @@ article, aside{
     background-image: url("../images/delete.jpg");
     background-size: cover;
 }
+.title{
+    margin-top: 4px;
+    margin-bottom: 4px ;
+    text-align: center;
+    background-color: orange;
+}
 .element{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border: 1px solid gray;
+    margin: 2px;
 }
 .searchefrm{
     display: flex;

@@ -17,24 +17,35 @@
                 <div class="titre">Linovo</div>
                 <div class="prix">3456DH</div>
                 <a href="add.php" class="add"></a>
+                <a href="detail.php?id=1"  class="detail">Detail</a>
             </div>
             <div class="article">
-                <img src="images/1.jpg" alt="" class="prodimg">
+                <img src="images/2.jpg" alt="" class="prodimg">
                 <div class="titre">Linovo</div>
                 <div class="prix">3456DH</div>
                 <a href="add.php" class="add"></a>
+                <a href="detail.php?id=2"  class="detail">Detail</a>
             </div>
             <div class="article">
-                <img src="images/1.jpg" alt="" class="prodimg">
+                <img src="images/3.jpg" alt="" class="prodimg">
                 <div class="titre">Linovo</div>
                 <div class="prix">3456DH</div>
                 <a href="add.php"  class="add"></a>
+                <a href="detail.php?id=3"  class="detail">Detail</a>
             </div>
             <div class="article">
-                <img src="images/1.jpg" alt="" class="prodimg">
+                <img src="images/4.jpg" alt="" class="prodimg">
                 <div class="titre">Linovo</div>
                 <div class="prix">3456DH</div>
                 <a href="add.php"  class="add"></a>
+                <a href="detail.php?id=4"  class="detail">Detail</a>
+            </div>
+            <div class="article">
+                <img src="images/4.jpg" alt="" class="prodimg">
+                <div class="titre">Linovo</div>
+                <div class="prix">3456DH</div>
+                <a href="add.php"  class="add"></a>
+                <a href="detail.php?id=4"  class="detail">Detail</a>
             </div>
         </article>
         <aside> 
@@ -45,18 +56,24 @@
             <div class="title">Total: 234DH</div>
             <div class="element">
                 <img src="images/1.jpg" alt="" class="prodimgmin">
-                <p>Linovo</p>
-                <p>3</p>
+                <div>Linovo thinkpad</div>
+                <div>3</div>
                 <a href="delete.php"  class="delete"></a>
             </div>
             <div class="element">
-                <img src="images/1.jpg" alt="" class="prodimgmin">
-                <p>Linovo</p>
-                <p>3</p>
+                <img src="images/2.jpg" alt="" class="prodimgmin">
+                <div>Linovo thinkpad</div>
+                <div>3</div>
                 <a href="delete.php"  class="delete"></a>
             </div>
             <div class="element">
-                <img src="images/1.jpg" alt="" class="prodimgmin">
+                <img src="images/3.jpg" alt="" class="prodimgmin">
+                <div>Linovo thinkpad</div>
+                <div>3</div>
+                <a href="delete.php"  class="delete"></a>
+            </div>
+            <div class="element">
+                <img src="images/4.jpg" alt="" class="prodimgmin">
                 <div>Linovo thinkpad</div>
                 <div>3</div>
                 <a href="delete.php"  class="delete"></a>

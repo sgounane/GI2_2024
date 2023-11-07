@@ -1,0 +1,84 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+header, footer{
+    background-color: orange;
+    padding:10px;
+    margin: 0;
+    
+}
+header{
+    position: sticky;
+    top:0px;
+    width: 100%;
+}
+section{
+    display: flex;
+    justify-content: space-between;
+}
+article{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+    justify-content: space-between;
+    
+}
+aside{
+    width: 18%;
+    padding: 2px;
+}
+article, aside{
+    border: 1px solid black;
+    margin: 4px;
+    height: 70vh;
+}
+
+.article{
+    position: relative;
+    border: 1px solid black;
+    margin: 4px;
+    height: fit-content;
+}
+.prodimg{
+    width: 200px;
+}
+.add{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top:0px;
+    right: 0px;
+    background-image: url("../images/add.png");
+    background-size: cover;
+}
+.prodimgmin{
+    width: 30px;
+    height: 30px;
+}
+.delete{
+    width: 30px;
+    height: 30px;
+    border: 1px solid red;
+    background-image: url("../images/delete.jpg");
+    background-size: cover;
+}
+.element{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.searchefrm{
+    display: flex;
+    justify-content: space-between;
+}
+
+.searchefrm input[type="text"] {
+    width: 60%;
+}
+footer{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}

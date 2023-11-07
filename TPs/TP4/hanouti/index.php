@@ -15,25 +15,29 @@
 <body>
     <header>
         <h1> Hanouti</h1>
+        <nav>
+            <a href="login.php">Login</a>
+        </nav>
     </header>
-    <pre>
-  
-    </pre>
+
     <section>
         <article> 
 
             <?php foreach($prods as $prod) :?>
                 <div class="article">
-                    <img src="images/1.jpg" alt="" class="prodimg">
-                    <div class="titre">Linovo</div>
-                    <div class="prix">3456DH</div>
+                    <img src=<?=$prod->image ?> alt="" class="prodimg">
+                    <div class="titre"><?=$prod->titre ?></div>
+                    <div class="prix"><?=$prod->prix ?>DH</div>
                     <a href="add.php" class="add"></a>
-                    <a href="detail.php?id=1"  class="detail">Detail</a>
+                    <a href=<?="detail.php?id=".$prod->id ?>  class="detail">Detail</a>
                 </div>
             <?php endforeach ?> 
             
         </article>
-        <aside> 
+        
+    </section>
+
+    <aside> 
             <form action="search.php" method="POST" class="searchefrm">
                 <input type="text" >
                 <input type="submit" value="Search" name="search">
@@ -64,7 +68,7 @@
                 <a href="delete.php"  class="delete"></a>
             </div>
         </aside>
-    </section>
+
     <footer>Footer</footer>
 </body>
 </html>

@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<?php 
+        include_once("db.php");
+        $prods=getProducts();
+       // var_dump($prods);
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,43 +16,22 @@
     <header>
         <h1> Hanouti</h1>
     </header>
+    <pre>
+  
+    </pre>
     <section>
         <article> 
-            <div class="article">
-                <img src="images/1.jpg" alt="" class="prodimg">
-                <div class="titre">Linovo</div>
-                <div class="prix">3456DH</div>
-                <a href="add.php" class="add"></a>
-                <a href="detail.php?id=1"  class="detail">Detail</a>
-            </div>
-            <div class="article">
-                <img src="images/2.jpg" alt="" class="prodimg">
-                <div class="titre">Linovo</div>
-                <div class="prix">3456DH</div>
-                <a href="add.php" class="add"></a>
-                <a href="detail.php?id=2"  class="detail">Detail</a>
-            </div>
-            <div class="article">
-                <img src="images/3.jpg" alt="" class="prodimg">
-                <div class="titre">Linovo</div>
-                <div class="prix">3456DH</div>
-                <a href="add.php"  class="add"></a>
-                <a href="detail.php?id=3"  class="detail">Detail</a>
-            </div>
-            <div class="article">
-                <img src="images/4.jpg" alt="" class="prodimg">
-                <div class="titre">Linovo</div>
-                <div class="prix">3456DH</div>
-                <a href="add.php"  class="add"></a>
-                <a href="detail.php?id=4"  class="detail">Detail</a>
-            </div>
-            <div class="article">
-                <img src="images/4.jpg" alt="" class="prodimg">
-                <div class="titre">Linovo</div>
-                <div class="prix">3456DH</div>
-                <a href="add.php"  class="add"></a>
-                <a href="detail.php?id=4"  class="detail">Detail</a>
-            </div>
+
+            <?php foreach($prods as $prod) :?>
+                <div class="article">
+                    <img src="images/1.jpg" alt="" class="prodimg">
+                    <div class="titre">Linovo</div>
+                    <div class="prix">3456DH</div>
+                    <a href="add.php" class="add"></a>
+                    <a href="detail.php?id=1"  class="detail">Detail</a>
+                </div>
+            <?php endforeach ?> 
+            
         </article>
         <aside> 
             <form action="search.php" method="POST" class="searchefrm">

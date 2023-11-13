@@ -58,4 +58,13 @@ function getUsers(){
     return $user;
     }
 
+    function ajoutProduit($titre,$prix,$image,$description){
+        global $db;
+        $req=$db->prepare("INSERT INTO produits VALUES(:titre, :prix, :image, :description" );
+        $req->execute(["titre"=>$titre, "prix"=>$prix, "image"=>$image, "description"=>$description]);
+
+    return $req;
+    }
+
+
 ?>

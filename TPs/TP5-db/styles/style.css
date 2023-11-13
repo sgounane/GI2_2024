@@ -1,0 +1,106 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+header, footer{
+    background-color: orange;
+    padding:10px;
+    margin: 0;
+    
+}
+.article img{
+    width: 180px;
+    height: 180px;
+}
+header{
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    top:0px;
+    width: 99%;
+    z-index: 10;
+}
+section{
+    display: flex;
+    justify-content: space-between;
+}
+article{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+    justify-content: space-between;
+    
+}
+nav{
+    width: fit-content;
+}
+aside{
+    position: fixed;
+    top:200px;
+    right: 4px;
+    width: 18%;
+    padding: 2px;
+    height: fit-content;
+}
+article, aside{
+    border: 1px solid black;
+    margin: 4px;
+}
+
+.article{
+    position: relative;
+    border: 1px solid black;
+    margin: 4px;
+    height: fit-content;
+}
+.prodimg{
+    width: 200px;
+}
+.add{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top:0px;
+    right: 0px;
+    background-image: url("../images/add.png");
+    background-size: cover;
+}
+.prodimgmin{
+    width: 30px;
+    height: 30px;
+}
+.delete{
+    width: 30px;
+    height: 30px;
+    border: 1px solid red;
+    background-image: url("../images/delete.jpg");
+    background-size: cover;
+}
+.title{
+    margin-top: 4px;
+    margin-bottom: 4px ;
+    text-align: center;
+    background-color: orange;
+}
+.element{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid gray;
+    margin: 2px;
+}
+.searchefrm{
+    display: flex;
+    justify-content: space-between;
+}
+
+.searchefrm input[type="text"] {
+    width: 60%;
+}
+footer{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}

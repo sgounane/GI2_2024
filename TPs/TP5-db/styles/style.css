@@ -22,6 +22,7 @@ header{
     z-index: 10;
 }
 section{
+    position: relative;
     display: flex;
     justify-content: space-between;
 }
@@ -30,7 +31,7 @@ article{
     display: flex;
     flex-wrap: wrap;
     overflow: scroll;
-    justify-content: space-between;
+    justify-content: space-around;
     
 }
 nav{
@@ -38,7 +39,7 @@ nav{
 }
 aside{
     position: fixed;
-    top:200px;
+    top:100px;
     right: 4px;
     width: 18%;
     padding: 2px;

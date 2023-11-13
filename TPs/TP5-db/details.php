@@ -1,7 +1,6 @@
 <?php
     include_once("db.php");
-    $db=connect();
-    $prod=getProductById($db,$_GET["id"]);
+    $prod=getProductById($_GET["id"]);
 ?>
 <!DOCTYPE html>
 <html lang="en">

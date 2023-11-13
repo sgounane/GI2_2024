@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+
 <?php 
+        session_start();
         include_once("db.php");
-        $db=connect();
-        $prods=getProducts($db);
+        $prods=getProducts();
        // var_dump($prods);
 ?>
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,7 +17,14 @@
     <header>
         <h1> Hanouti</h1>
         <nav>
-            <a href="login.php">Login</a>
+            
+            <?php if(isset($_SESSION["user"])):?>
+                
+                <a href="prodForm.php">Ajouter un produit</a>
+                <a href="logout.php">Logout</a>
+            <?php else:?>
+                <a href="login.php">Login</a>
+            <?php endif ?>
         </nav>
     </header>
 

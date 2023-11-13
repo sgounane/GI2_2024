@@ -12,10 +12,13 @@ function connect(){
 
 }
 
+$db=connect();
+
     //
 
     
-function getProducts($db){
+function getProducts(){
+    global $db;
     $req=$db->prepare("SELECT * FROM produits");
     //var_dump($req);
     $req->execute();
@@ -24,7 +27,8 @@ function getProducts($db){
 return $prods;
 }
 
-function getProductById($db,$id){
+function getProductById($id){
+    global $db;
     $req=$db->prepare("SELECT * FROM produits WHERE id=:id ");
     $req->execute(["id"=>$id]);
     //$prods=$req->fetchAll();
@@ -34,8 +38,24 @@ return $prods;
 
 
 function getUsers(){
-    $users=json_decode(file_get_contents("data/users.json"));
+    global $db;
+    $req=$db->prepare("SELECT * FROM users");
+    //var_dump($req);
+    $req->execute();
+    //$prods=$req->fetchAll();
+    $users=$req->fetchAll(PDO::FETCH_OBJ);
+
     return $users;
+    }
+
+
+    function getUser($email, $password){
+        global $db;
+        $req=$db->prepare("SELECT * FROM users WHERE email=:email AND password=:password" );
+        $req->execute(["email"=>$email,"password"=>$password]);
+        //$prods=$req->fetchAll();
+        $user=$req->fetch(PDO::FETCH_OBJ);
+    return $user;
     }
 
 ?>

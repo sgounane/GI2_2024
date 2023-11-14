@@ -17,10 +17,13 @@ if($prod){
         });
         if(count($p)){
             echo $id." QTT changed";
+            foreach($_SESSION["cart"] as $k=>$e)
+                if($e["id"]==$id) $_SESSION["cart"][$k]["qtt"]++;
+            $_SESSION["total"]+=$prod->prix;
         } 
         else{
             array_push($_SESSION["cart"],["id"=>$prod->id, "image"=>$prod->image, "titre"=>$prod->titre, "prix"=>$prod->prix, "qtt"=>1]);
-            echo $id."New Prod added";
+            $_SESSION["total"]+=$prod->prix;
         } 
             
     }

@@ -6,7 +6,7 @@
 ?>
 
     <div class="container">
-    <form action= "/auth" method="POST" class=" border mt-5 p-3 w-50 ml-auto mr-auto">
+    <form action= "../controllers/auth.php" method="POST" class=" border mt-5 p-3 w-50 ml-auto mr-auto">
   <div class="form-group  ">
     <label for="exampleInputEmail1">Email address</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" required>

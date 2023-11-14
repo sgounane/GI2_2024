@@ -1,0 +1,26 @@
+[
+    {
+        "id":1,
+        "mail":"admin@hanouti.ma",
+        "password":"hnouti",
+        "role":"admin"
+    },
+    {
+        "id":2,
+        "mail":"sanae@hanouti.ma",
+        "password":"hnouti",
+        "role":"user"
+    },
+    {
+        "id":3,
+        "mail":"said@hanouti.ma",
+        "password":"hnouti",
+        "role":"user"
+    },
+    {
+        "id":4,
+        "mail":"ahmed@hanouti.ma",
+        "password":"hnouti",
+        "role":"admin"
+    }
+]

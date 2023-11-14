@@ -25,7 +25,7 @@ include_once("header.php");
     </section>
 
     <aside> 
-            
+    <div class="title">Mn Panier</div>
             
             <?php if(isset ($_SESSION["cart"])):?>  
                 <form action="search.php" method="POST" class="searchefrm">
@@ -35,9 +35,9 @@ include_once("header.php");
                 <div class="title">Total: <?=$_SESSION["total"] ?></div>
             <?php foreach($_SESSION["cart"] as $p):?>
                 <div class="element">
-                    <img src="../images/1.jpg" alt="" class="prodimgmin">
-                    <div>Linovo thinkpad</div>
-                    <div>3</div>
+                    <img src=<?="../".$p["image"]?> alt="" class="prodimgmin">
+                    <div><?=$p["titre"]?></div>
+                    <div><?=$p["qtt"]?></div>
                     <a href="delete.php"  class="delete"></a>
                 </div>
             <?php endforeach ?>

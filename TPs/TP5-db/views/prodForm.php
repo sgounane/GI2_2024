@@ -9,7 +9,7 @@
 ?>
 
     <div class="container">
-    <form action= "ajoutProduit.php" method="POST" class=" border mt-5 p-3 w-50 ml-auto mr-auto" enctype="multipart/form-data">
+    <form action= "/add" method="POST" class=" border mt-5 p-3 w-50 ml-auto mr-auto" enctype="multipart/form-data">
   <div class="form-group  ">
     <label for="exampleInputEmail1">Titre</label>
     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="titre" required>

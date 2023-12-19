@@ -6,6 +6,8 @@
             <h1>{{$article->titre}}</h1>
             <p>{{$article->slug}}</p>
             <p>{{$article->content }}</p>
+            <p>{{$article->user?->name }}</p>
+            <p>{{$article->category?->name }}</p>
             <a href={{"/articles/".$article->slug}} >Lire plus </a>
         @endforeach
         {{$articles->links()}} 

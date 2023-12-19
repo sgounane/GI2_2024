@@ -2,14 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Article;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
 class ArticleController extends Controller
 {
     public function index(Request $request) {
-        $articles=\App\Models\Article::orderBy('updated_at','desc')->paginate(4);
+       
+        $articles=\App\Models\Article::with("user","category")->orderBy('updated_at','desc')->paginate(4);
+        
         $latest=\App\Models\Article::orderBy('updated_at','desc')->take(5)->get();
         
         return view('home',['titre'=>"Mon blog", 'articles'=>$articles, "latest"=>$latest]);

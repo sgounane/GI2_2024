@@ -15,18 +15,38 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', function () {
-    return ["12"=>["name"=>"Ahmed","age"=>21],"1"=>["name"=>"Mohammed", "age"=>24]];
-});
+    return \App\Models\Post::paginate(2);
+})->name("home");
 
-Route::get('/posts', function (Request $req) {
+Route::get('/posts/create', function (Request $req) {
     //dd($req->input("id"));
     $users= ["12"=>["name"=>"Ahmed","age"=>21],"1"=>["name"=>"Mohammed", "age"=>24]];
     //dd($users);
     return $users;
-});
+})->name("posts");
+
+
 
 
 Route::get('/posts/{id}/{nom?}', function (string $idd,?string $name=null) {
 
     return [$idd,$name];
+})->name("post");
+
+Route::get("/name", function(){
+    return \route("posts");
+});
+
+Route::get("/onepost", function(){
+    return \route("post",["id"=>12,"nom"=>"Yhya"]);
+});
+
+Route::get("/create/post", function(Request $req){
+    $post=new \App\Models\Post();
+    $post->title=$req->input("title");
+    $post->slug=$req->input("slug");
+    $post->content="Un contenue react .....";
+    $post->save();
+   
+    return $post;
 });
